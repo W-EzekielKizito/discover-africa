@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Africa | Unforgettable Safaris & Adventures</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Discover Africa</div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" type="button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        
+        <!-- Top Destinations Dropdown -->
+        <li class="dropdown">
+          <a href="top-destinations.html" class="dropbtn" id="dropdownBtn">
+            Top Destinations <span class="arrow-down">&#9660;</span>
+          </a>
+          <div class="dropdown-content">
+            <div class="caret"></div>
+            <ul>
+              <li><a href="Serengeti.html">Serengeti, Tanzania</a></li>
+              <li><a href="Victoria.html">Victoria, Zambia</a></li>
+              <li><a href="Murchison.html">Murchison, Uganda</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Background overlay for mobile drawer -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- Hero Slideshow Section -->
+  <section id="hero" class="hero-slideshow">
+    <div class="slides-container">
+      <div class="slide active">
+        <img src="img/safari_1.jpg" alt="Serengeti Safari, Tanzania">
+      </div>
+      <div class="slide">
+        <img src="img/safari_a.avif" alt="Victoria Falls, Zimbabwe">
+      </div>
+      <div class="slide">
+        <img src="img/safari_b.avif" alt="Cape Town, South Africa">
+      </div>
+      <div class="slide">
+        <img src="img/safari_c.avif" alt="Pyramids of Giza, Egypt">
+      </div>
+      <div class="slide">
+        <img src="img/safari_1.jpg" alt="Maasai Mara, Kenya">
+      </div>
+      <div class="slide">
+        <img src="img/safari_1.jpg" alt="Sossusvlei Dunes, Namibia">
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1>Experience the Heart of Africa</h1>
+      <p>From majestic wildlife safaris to natural wonders, start planning your dream getaway today.</p>
+      <a href="#destinations" class="btn">Explore Destinations</a>
+    </div>
+
+    <!-- Navigation Controls -->
+    <button class="slide-btn prev" aria-label="Previous Slide" type="button">&#10094;</button>
+    <button class="slide-btn next" aria-label="Next Slide" type="button">&#10095;</button>
+
+    <!-- Indicators -->
+    <div class="dots-container">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- Top Destinations Grid -->
+  <section id="destinations" class="container">
+    <h2>Top Destinations</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="img/safari_1.jpg" alt="Serengeti Safari, Tanzania">
+        <div class="card-body">
+          <h3>Serengeti National Park</h3>
+          <p>Tanzania</p>
+          <p class="desc">Witness the Great Migration and world-renowned wildlife habitats in the vast savanna.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Victoria Falls, Zimbabwe">
+        <div class="card-body">
+          <h3>Victoria Falls</h3>
+          <p>Zambia & Zimbabwe</p>
+          <p class="desc">Discover the world's largest curtain of falling water, locally known as "The Smoke That Thunders."</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Cape Town, South Africa">
+        <div class="card-body">
+          <h3>Cape Town & Table Mountain</h3>
+          <p>South Africa</p>
+          <p class="desc">Enjoy coastal scenery, rich culture, and stunning panoramic mountain views.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Budget Calculator Section -->
+  <section id="calculator" class="calculator-section">
+    <div class="container">
+      <h2>Estimate Your Travel Cost</h2>
+      <div class="calc-box">
+        <div class="input-group">
+          <label for="travelers">Number of Travelers:</label>
+          <input type="number" id="travelers" min="1" value="2">
+        </div>
+        <div class="input-group">
+          <label for="days">Trip Duration (Days):</label>
+          <input type="number" id="days" min="1" value="7">
+        </div>
+        <div class="input-group">
+          <label for="package">Select Accommodation Tier:</label>
+          <select id="package">
+            <option value="150">Standard Lodge ($150 / day)</option>
+            <option value="300" selected>Luxury Safari Camp ($300 / day)</option>
+            <option value="550">Ultra Luxury Resort ($550 / day)</option>
+          </select>
+        </div>
+        <button id="calc-btn" class="btn" type="button">Calculate Estimate</button>
+        <div id="result" class="result-text">Total Estimate: <strong>$4,200</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Discover Africa Tourism. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

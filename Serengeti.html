@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serengeti National Park | Discover Africa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Discover Africa</div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" type="button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        
+        <!-- Top Destinations Dropdown -->
+        <li class="dropdown">
+          <a href="top-destinations.html" class="dropbtn" id="dropdownBtn">
+            Top Destinations <span class="arrow-down">&#9660;</span>
+          </a>
+          <div class="dropdown-content">
+            <div class="caret"></div>
+            <ul>
+              <li><a href="Serengeti.html" class="active">Serengeti, Tanzania</a></li>
+              <li><a href="Victoria.html">Victoria, Zambia</a></li>
+              <li><a href="Murchison.html">Murchison, Uganda</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Background overlay for mobile drawer -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main class="container">
+    <h1>Serengeti National Park, Tanzania</h1>
+    <p class="subtitle">Home to the world-famous Great Wildebeest Migration.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <img src="img/safari_1.jpg" alt="Savanna Big Game">
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=800&q=80" alt="Lions on Safari">
+      </div>
+    </div>
+
+    <section style="margin-top: 2rem;">
+      <h2>About Serengeti National Park</h2>
+      <p>Spanning over 14,750 square kilometers, the Serengeti ecosystem is one of Africa’s most celebrated wildlife refuges. Millions of wildebeest, zebras, and gazelles move through its endless plains every year in search of fresh grazing grounds, closely trailed by apex predators like lions, cheetahs, and leopards.</p>
+      
+      <h3>Key Highlights</h3>
+      <ul>
+        <li>Witness the river crossings during the Great Migration (July to October).</li>
+        <li>Sunrise hot air balloon safaris with champagne breakfasts in the bush.</li>
+        <li>Game drives through Seronera Valley, home to large lion pride populations.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Discover Africa Tourism. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

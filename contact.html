@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Discover Africa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Discover Africa</div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" type="button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        
+        <!-- Top Destinations Dropdown -->
+        <li class="dropdown">
+          <a href="top-destinations.html" class="dropbtn" id="dropdownBtn">
+            Top Destinations <span class="arrow-down">&#9660;</span>
+          </a>
+          <div class="dropdown-content">
+            <div class="caret"></div>
+            <ul>
+              <li><a href="Serengeti.html">Serengeti, Tanzania</a></li>
+              <li><a href="Victoria.html">Victoria, Zambia</a></li>
+              <li><a href="Murchison.html">Murchison, Uganda</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Background overlay for mobile drawer -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main class="container">
+    <h1>Our Regional Offices & Contact Details</h1>
+    <p class="subtitle">Reach out directly to our local African branches for travel support and inquiries.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-body">
+          <h3>Uganda Regional Office</h3>
+          <p><strong>Address:</strong> Plot 12 Kampala Road, Kampala, Uganda</p>
+          <p><strong>Email:</strong> uganda@discoverafrica.com</p>
+          <p><strong>Phone:</strong> +256 414 000 111</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Tanzania Regional Office</h3>
+          <p><strong>Address:</strong> Arusha City Center, Arusha, Tanzania</p>
+          <p><strong>Email:</strong> tanzania@discoverafrica.com</p>
+          <p><strong>Phone:</strong> +255 272 000 222</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Zambia Regional Office</h3>
+          <p><strong>Address:</strong> Livingstone Tourism District, Livingstone, Zambia</p>
+          <p><strong>Email:</strong> zambia@discoverafrica.com</p>
+          <p><strong>Phone:</strong> +260 213 000 333</p>
+        </div>
+      </div>
+    </div>
+
+      <h2>Send Us An Inquiry</h2>
+      <form class="calc-box" action="#" method="post">
+        <div class="input-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+        <div class="input-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" required placeholder="john@example.com">
+        </div>
+        <div class="input-group">
+          <label for="destination">Interested Destination:</label>
+          <select id="destination">
+            <option value="serengeti">Serengeti, Tanzania</option>
+            <option value="victoria">Victoria Falls, Zambia</option>
+            <option value="murchison">Murchison Falls, Uganda</option>
+            <option value="other">Other African Region</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="message">Your Inquiry:</label>
+          <textarea id="message" rows="4" style="width:100%; border-radius:4px; padding:0.5rem;" placeholder="Tell us about your trip dates and requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn">Submit Inquiry</button>
+      </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Discover Africa Tourism. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

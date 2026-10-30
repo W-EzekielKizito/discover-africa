@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murchison Falls | Discover Africa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Discover Africa</div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" type="button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        
+        <!-- Top Destinations Dropdown -->
+        <li class="dropdown">
+          <a href="top-destinations.html" class="dropbtn" id="dropdownBtn">
+            Top Destinations <span class="arrow-down">&#9660;</span>
+          </a>
+          <div class="dropdown-content">
+            <div class="caret"></div>
+            <ul>
+              <li><a href="Serengeti.html">Serengeti, Tanzania</a></li>
+              <li><a href="Victoria.html">Victoria, Zambia</a></li>
+              <li><a href="Murchison.html" class="active">Murchison, Uganda</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Background overlay for mobile drawer -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main class="container">
+    <h1>Murchison Falls National Park, Uganda</h1>
+    <p class="subtitle">Where the mighty River Nile forces itself through a narrow 7-meter gorge.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Ugandan Wildlife">
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="River Nile and Waterfall">
+      </div>
+    </div>
+
+    <section style="margin-top: 2rem;">
+      <h2>About Murchison Falls</h2>
+      <p>Murchison Falls National Park is Uganda’s largest national park. The highlight is the dramatic drop where the Victoria Nile forces its entire volume through a tiny rocky gap, plunging 43 meters below before flowing calmly into Lake Albert.</p>
+      
+      <h3>Key Highlights</h3>
+      <ul>
+        <li>Boat cruises along the Victoria Nile to the base of Murchison Falls.</li>
+        <li>Spotting elephants, Rothschild giraffes, lions, and Nile crocodiles.</li>
+        <li>Top of the falls hike for up-close viewing of the thunderous waters.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Discover Africa Tourism. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

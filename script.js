@@ -125,4 +125,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startAutoplay();
   }
+  // Click-and-drag horizontal scrolling for desktop users
+const container = document.querySelector('.feed-container');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+container.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+container.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+container.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - container.offsetLeft;
+  const walk = (x - startX) * 2; // Adjust scroll speed multiplier
+  container.scrollLeft = scrollLeft - walk;
+});
+
+// Card click action handler
+const cards = document.querySelectorAll('.feed-card');
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const username = card.querySelector('.username').innerText;
+    console.log(`Story clicked for: ${username}`);
+  });
+});
+});
+// Full-Screen Story Modal Functionality
+const modal = document.getElementById('storyModal');
+const modalClose = document.querySelector('.modal-close');
+const modalImage = document.getElementById('modalImage');
+const modalAvatar = document.getElementById('modalAvatar');
+const modalUsername = document.getElementById('modalUsername');
+const modalLocationText = document.getElementById('modalLocationText');
+
+const cards = document.querySelectorAll('.feed-card');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Extract background image URL
+    const bgImageStyle = card.style.backgroundImage;
+    const avatarSrc = card.querySelector('.badge-avatar').src;
+    const username = card.querySelector('.username').innerText;
+    const location = card.querySelector('.location-info span').innerText;
+
+    // Populate modal elements
+    modalImage.style.backgroundImage = bgImageStyle;
+    modalAvatar.src = avatarSrc;
+    modalUsername.innerText = username;
+    modalLocationText.innerText = location;
+
+    // Show modal
+    modal.classList.add('active');
+  });
+});
+
+// Close modal on clicking the close button
+modalClose.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+// Close modal when clicking outside the content box
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+  }
 });
